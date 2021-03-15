@@ -7,6 +7,8 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import MovieDetailsScreen from '../screens/MovieDetailsScreen/MovieDetailsScreen';
+
 import TabTwoScreen from '../screens/TabTwoScreen';
 import SearchScreen from '../screens/SearchScreen';
 import DownloadsScreen from '../screens/DownloadsScreen';
@@ -66,6 +68,13 @@ const HomeStack = createStackNavigator<HomeParamList>();
 function HomeNavigator() {
   return (
     <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="MovieDetailsScreen"
+        component={MovieDetailsScreen}
+        options={{
+          title: ''
+        }}
+      />
       <HomeStack.Screen
         name="HomeScreen"
         component={HomeScreen}
